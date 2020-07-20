@@ -15,14 +15,19 @@ const PORT = process.env.PORT || 3001;
 
 //middleware
 app.use(express.static('./public'));
-//if css isnt rendering, try public/styles
 app.use(express.urlencoded({extended: true}));
 
 
-app.get('/hello', renderHello);
+app.get('/', renderHomepage);
+app.get('/searches/new', renderNewForm);
 
-function renderHello(request, response){
+
+function renderHomepage(request, response){
   response.render('pages/index');
+}
+
+function renderNewForm(request, response){
+  response.render('pages/searches/new');
 }
 
 
