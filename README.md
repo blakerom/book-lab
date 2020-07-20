@@ -1,6 +1,7 @@
-# book-lab
+# Book Lab
 
 **Author**: Tia Low & Blake Romero
+
 **Version**: 1.11.01 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -20,7 +21,17 @@ Libraries:
 ## Change Log
  <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples: -->
 
-07-20-2020 :pm - Stuff
+07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
+
+07-20-2020 :pm - 
+
+07-20-2020 :pm - 
+
+07-20-2020 :pm - 
+
+07-20-2020 :pm - 
+
+
 
 ## Credits and Collaborations
 - 
@@ -28,19 +39,31 @@ Libraries:
 
 ## Feature Tasks - Time Estimates
 
-1. Quick UI
+1. Lab 11 - Quick UI
 
 Estimate of time needed to complete: 1 hr
 
 Start time: 2:15pm
 
+Finish time: 2:45pm
+
+Actual time needed to complete: 30 mins
+<hr>
+
+
+2. Lab 11 - Google Books API Search
+
+Estimate of time needed to complete: 45 mins
+
+Start time: 2:50pm
+
 Finish time: _____
 
 Actual time needed to complete: _____
 <hr>
 
 
-2. Google Books API Search
+3. Lab 11 - Display Search Results
 
 Estimate of time needed to complete: _____
 
@@ -52,7 +75,7 @@ Actual time needed to complete: _____
 <hr>
 
 
-3. Display Search Results
+4. Lab 11 - Error Messages
 
 Estimate of time needed to complete: _____
 
@@ -64,7 +87,7 @@ Actual time needed to complete: _____
 <hr>
 
 
-4. Error Messages
+5. Lab 11 - Cleanup UI
 
 Estimate of time needed to complete: _____
 
@@ -76,19 +99,7 @@ Actual time needed to complete: _____
 <hr>
 
 
-5. Cleanup UI
-
-Estimate of time needed to complete: _____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____
-<hr>
-
-
-6. Homepage
+6. Lab 11 - Homepage
 
 Estimate of time needed to complete: _____
 
