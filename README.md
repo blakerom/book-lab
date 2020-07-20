@@ -2,7 +2,7 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.11.01 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.11.02 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. 
@@ -23,7 +23,7 @@ Libraries:
 
 07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
 
-07-20-2020 :pm - 
+07-20-2020 3:15pm - Added functionality and route for search form, deploying to Heroku to check functionality.  
 
 07-20-2020 :pm - 
 
@@ -57,9 +57,9 @@ Estimate of time needed to complete: 45 mins
 
 Start time: 2:50pm
 
-Finish time: _____
+Finish time: 3:15pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 25 mins
 <hr>
 
 
