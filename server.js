@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app = express();
+const pg = require('pg');
 
 require('dotenv').config();
 require('ejs');
@@ -13,20 +14,36 @@ app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3001;
 
+const client = new pg.Client(process.env.DATABASE_URL);
+client.on('error', error => {
+  console.log('ERROR', error);
+});
+
 //middleware
 // below tells express that any static sites being served are coming from public folder
 app.use(express.static('./public'));
 //the below parses the form (body parser)
 app.use(express.urlencoded({extended: true}));
 
-app.get('/', renderHomepage);
+app.get('/', getAllBooks);
 app.get('/searches/new', renderNewForm);
 app.post('/searches', collectSearchResults);
 app.post('/error', errorHandler);
 
-function renderHomepage(request, response){
-  response.render('pages/index');
+
+function getAllBooks(request, response){
+  let sql = 'SELECT * FROM books';
+
+  client.query(sql)
+    .then(results => {
+      let books = results.rows;
+      response.status(200).render('/index.ejs', {book: books});
+    })
 }
+
+// function renderHomepage(request, response){
+//   response.render('pages/index');
+// }
 
 function renderNewForm(request, response){
   response.render('pages/searches/new');
@@ -72,7 +89,9 @@ function Book(obj){
   this.description = obj.description ? obj.description : 'Description not available';
 }
 
-
-app.listen(PORT, () => {
-  console.log(`listening on ${PORT}`);
-});
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`listening on ${PORT}`);
+  });
+})
