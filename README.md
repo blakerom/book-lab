@@ -79,13 +79,13 @@ Actual time needed to complete: 2 hrs 20 mins
 
 4. Lab 11 - Error Messages
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 6:05pm
 
-Finish time: _____
+Finish time: 
 
-Actual time needed to complete: _____
+Actual time needed to complete: 
 <hr>
 
 
