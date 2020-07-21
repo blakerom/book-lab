@@ -20,6 +20,7 @@ app.use(express.urlencoded({extended: true}));
 app.get('/', renderHomepage);
 app.get('/searches/new', renderNewForm);
 app.post('/searches', collectSearchResults);
+app.post('/error', errorHandler);
 
 function renderHomepage(request, response){
   response.render('pages/index');
@@ -47,12 +48,17 @@ function collectSearchResults(request, response){
       const bookArray = bookReturn.map(books => {
         return new Book(books.volumeInfo);
       })
-
       response.render('pages/searches/show.ejs', {searchResults: bookArray})
+    })
+    .catch((error) => {
+      console.log('ERROR', error);
+      response.render('pages/error');
     })
 }
 
-
+function errorHandler(request, response){
+  response.render('pages/error');
+}
 
 function Book(obj){
 
