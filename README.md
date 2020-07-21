@@ -25,7 +25,7 @@ Libraries:
 
 07-20-2020 3:15pm - Added functionality and route for search form, deploying to Heroku to check functionality.  
 
-07-20-2020 :pm - 
+07-20-2020 5:55pm - Added functionality and route for a book search using a request to the Google Books API. Rendered results to page, deploying to Heroku to check functionality. 
 
 07-20-2020 :pm - 
 
@@ -34,7 +34,9 @@ Libraries:
 
 
 ## Credits and Collaborations
-- 
+- Using regex to prevent mixed content
+  - https://stackoverflow.com/questions/5491196/rewriting-http-url-to-https-using-regular-expression-and-javascript
+
 
 
 ## Feature Tasks - Time Estimates
@@ -65,13 +67,13 @@ Actual time needed to complete: 25 mins
 
 3. Lab 11 - Display Search Results
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hr
 
-Start time: _____
+Start time: 3:35pm
 
-Finish time: _____
+Finish time: 5:55pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hrs 20 mins
 <hr>
 
 
