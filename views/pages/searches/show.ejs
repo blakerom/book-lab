@@ -5,30 +5,31 @@
     <link rel="stylesheet" type="text/css" href="../styles/base.css">
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
     <link rel="stylesheet" type="text/css" href="../styles/modules.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
     <title>Search Results</title>
 </head>
 <body>
   <header>
-
     <nav>
-      <a href="../index.ejs">Home</a>
-      <a href="/new.ejs">New Search</a>
+      <a href="../index">Home</a>
+      <a href="/new">New Search</a>
       <a href="#">Results</a>
     </nav>
-
   </header>
 
+  <h1>Search Results</h1>
+
   <main>
-    <h2>Search Results</h2>
-    <div>
+    <div class="results">
       <% searchResults.forEach( book => { %>
         <img src="<%=book.thumbnail %>">
-        <h2><%= book.title %></h2>
+        <h2 id="test"><%= book.title %></h2>
         <h3><%= book.authors %></h3>
         <p><%= book.description %></p>
       <% }) %>
     </div>
-
   </main>
   
 </body>
