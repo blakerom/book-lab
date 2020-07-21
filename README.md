@@ -19,17 +19,15 @@ Libraries:
   - ejs
 
 ## Change Log
- <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples: -->
-
 07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
 
 07-20-2020 3:15pm - Added functionality and route for search form, deploying to Heroku to check functionality.  
 
 07-20-2020 5:55pm - Added functionality and route for a book search using a request to the Google Books API. Rendered results to page, deploying to Heroku to check functionality. 
 
-07-20-2020 :pm - 
+07-20-2020 9:56pm - Added styling to pages and fixed pathing issues.
 
-07-20-2020 :pm - 
+<!-- 07-20-2020 :pm -  -->
 
 
 
@@ -95,20 +93,20 @@ Estimate of time needed to complete: 45 min
 
 Start time: 6:50 pm
 
-Finish time: 
+Finish time: 9:55pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 2hr 5min
 <hr>
 
 
 6. Lab 11 - Homepage
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 15min
 
-Start time: _____
+Start time: 9:55pm
 
-Finish time: _____
+Finish time: 9:56pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 min
 
 
