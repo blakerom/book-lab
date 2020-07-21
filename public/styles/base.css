@@ -2,7 +2,9 @@
   box-sizing: border-box;
   background-color: rgb(26, 98, 122);
 }
-
-h1 {
-  color: rgb(250, 212, 115);
+body {
+  width: 480px;
+  text-align: center;
+  margin: auto;
+  font-family: 'Lora', serif;
 }
