@@ -8,13 +8,15 @@ require('ejs');
 
 const superagent = require('superagent');
 
-//below sets the view engine
+//below sets the view engine, now its looking for the views folder
 app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3001;
 
 //middleware
+// below tells express that any static sites being served are coming from public folder
 app.use(express.static('./public'));
+//the below parses the form (body parser)
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', renderHomepage);
