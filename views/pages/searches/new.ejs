@@ -12,29 +12,41 @@
 
   <main>
 
-    <h3>Search by Title or Author</h3>
+    <header>
 
-    <form action="/searches" method="post">
+      <nav>
+        <a href="../index.ejs">Home</a>
+        <a href="/new.ejs">New Search</a>
+        <a href="/show.ejs">Show Results</a>
+      </nav>
+  
+    </header>
 
-      <input type="text" name="search" placeholder="Enter a title or author" required>
-      
-      <fieldset>
-        <label for="title">
-          <span>Title</span>
-          <input type="radio" name="search" value="title" required>
-        </label>
-      </fieldset>
+    <section>
+      <h3>Search by Title or Author</h3>
 
-      <fieldset>
-        <label for="author">
-          <span>Author</span>
-          <input type="radio" name="search" value="author" required>
-        </label>
-      </fieldset>
+      <form action="/searches" method="post">
 
-      <button type="submit">Search the Google Books API</button>
+        <input type="text" name="search" placeholder="Enter a title or author" required>
+        
+        <fieldset>
+          <label for="title">
+            <span>Title</span>
+            <input type="radio" name="search" value="title" required>
+          </label>
+        </fieldset>
 
-    </form>
+        <fieldset>
+          <label for="author">
+            <span>Author</span>
+            <input type="radio" name="search" value="author" required>
+          </label>
+        </fieldset>
+
+        <button type="submit">Search the Google Books API</button>
+
+      </form>
+    </section>
 
   </main>
 

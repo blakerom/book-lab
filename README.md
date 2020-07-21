@@ -83,21 +83,21 @@ Estimate of time needed to complete: 30 min
 
 Start time: 6:05pm
 
-Finish time: 
+Finish time: 6:45pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 40 min
 <hr>
 
 
 5. Lab 11 - Cleanup UI
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 min
 
-Start time: _____
+Start time: 6:50 pm
 
-Finish time: _____
+Finish time: 
 
-Actual time needed to complete: _____
+Actual time needed to complete: 
 <hr>
 
 
