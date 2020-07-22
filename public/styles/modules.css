@@ -20,9 +20,15 @@ main {
 h2 {
   font-size: 1.4em;
 }
-.results img{
+/* .results img{
   margin: 2em 0 1.5em;
   border: 6px solid white;
+} */
+main .book-item h5 {
+  display: none;
+}
+main .book-item p {
+  display: none;
 }
 .results h2 {
   margin-bottom: 1em;
@@ -34,4 +40,8 @@ h2 {
   margin-bottom: 2em;
   width: 400px;
   word-wrap: normal;
+}
+img {
+  margin: 2em 0 1.5em;
+  border: 6px solid white;
 }

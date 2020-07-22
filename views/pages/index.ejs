@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  <title>Document</title>
+  <title>Home</title>
 </head>
 <body>
   
@@ -22,25 +22,15 @@
     </nav>
   </header>
 
-  <h1>Hello World</h1>
+  <h1>Hello Reader</h1>
 
   <main>
 
-    <section>
-      <ul>
-        <li>
-          Total books in Library: <%= count %>
-        </li>
-        <% book.forEach(bookItem => { %>
-          <li class="book-item" data-id="<%=bookItem.id %>">
-            <img src="<%= bookItem.image_url %>" alt="<%= bookItem.title %>">
-            <h2>title: <%= bookItem.title %></h2>
-            <h4>author: <%= bookItem.author %></h4>
-            <a href="/books/detail<%= bookItem.id %>">Click Here for More Details</a>
-          </li>
-        <% }) %>
-      </ul>
-    </section>
+    <p>Total books in Library: <%= book.length %></p>
+    <% book.forEach(bookItem => { %>
+    <%- include('books/detail.ejs', {book: bookItem}) %>
+    <a href="/books/detail/<%= bookItem.id %>">Click Here for More Details</a>
+    <% }) %>
 
   </main>
   
