@@ -1,0 +1,12 @@
+<section>
+  <ul>
+    <li class="book-item" data-id="<%=book.id %>">
+      <img src="<%= book.image_url %>" alt="<%= book.title %>" style="max-height: 400px; width: 300px;">
+      <h2>Title:  <%= book.title %></h2>
+      <h4>Author:  <%= book.author %></h4>
+      <h5>ISBN:  <%= book.isbn %></h5>
+      <p>Description:  <%= book.description %></p>
+      <p>Bookshelf:  <%= book.bookshelf %></p>
+    </li>
+  </ul>
+</section>

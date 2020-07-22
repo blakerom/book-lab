@@ -2,7 +2,7 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.11.02 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.12.01 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. 
@@ -10,6 +10,18 @@ We are building an application that allows a user to search book titles from the
 ## Getting Started
 - User should install libraries
 - Create .env file to hold keys, see envSamples for what's needed
+- Create database postgresql
+- Setup database table books.sql:
+  - CREATE TABLE books(
+      id SERIAL PRIMARY KEY,
+      author VARCHAR(255),
+      title VARCHAR(255),
+      isbn VARCHAR(255),
+      image_url VARCHAR(255),
+      description TEXT,
+      bookshelf TEXT);
+- 
+
 
 ## Architecture
 Libraries:
@@ -27,7 +39,7 @@ Libraries:
 
 07-20-2020 9:56pm - Added styling to pages and fixed pathing issues.
 
-<!-- 07-20-2020 :pm -  -->
+07-21-2020 5:17pm - Added Database of books for readers to add to.
 
 
 
@@ -95,7 +107,7 @@ Start time: 6:50 pm
 
 Finish time: 9:55pm
 
-Actual time needed to complete: 2hr 5min
+Actual time needed to complete: 
 <hr>
 
 
@@ -108,5 +120,65 @@ Start time: 9:55pm
 Finish time: 9:56pm
 
 Actual time needed to complete: 1 min
+<hr>
 
+
+7. Lab 12 - Save Books
+
+Estimate of time needed to complete: 90min
+
+Start time: 2:15pm
+
+Finish time: 5:15pm
+
+Actual time needed to complete: 3hr
+<hr>
+
+
+8. Lab 12 - View Details Page
+
+Estimate of time needed to complete: 90min
+
+Start time: 5:20pm
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+9. Lab 12 - Add Books to DB
+
+Estimate of time needed to complete: 60min
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+10. Lab 12 - App consistency
+
+Estimate of time needed to complete: 90min
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+11. Lab 12 - Clean UI
+
+Estimate of time needed to complete: 30min
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
 
