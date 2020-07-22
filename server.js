@@ -14,6 +14,9 @@ app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3001;
 
+// DATABASE_URL=postgres://jkfbgyafvvmedg:242edfde8c06b212a7f34f6206d46a1c1487131eca241c51c2a231507096ea07@ec2-54-234-44-238.compute-1.amazonaws.com:5432/d8092skbfpsrqb
+// DATABASE_URL=postgres://localhost:5432/books_app
+
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', error => {
   console.log('ERROR', error);
@@ -32,13 +35,21 @@ app.post('/error', errorHandler);
 
 
 function getAllBooks(request, response){
-  let sql = 'SELECT * FROM books';
+  let sql = 'SELECT * FROM books;';
 
   client.query(sql)
     .then(results => {
       let books = results.rows;
       response.status(200).render('/index.ejs', {book: books});
     })
+
+  let sqlBooks = 'SELECT COUNT (*) FROM books;';
+  
+  client.query(sqlBooks)
+    .then(sqlBooksResult => {
+      response.status(200).render('/index.ejs', {count: sqlBooksResult});
+    })
+
 }
 
 // function renderHomepage(request, response){
