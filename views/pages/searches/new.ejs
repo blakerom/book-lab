@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="../styles/base.css">
-    <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <link rel="stylesheet" type="text/css" href="../styles/modules.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    
+    <%- include('../../layout/head.ejs') %>
     <title>Book Search</title>
-</head>
+  </head>
 
 <body>
   
-  <header>
-    <nav>
-      <a href="../">Home</a>
-      <a href="/searches/new">New Search</a>
-      <a href="/searches/show">Show Results</a>
-    </nav>
-  </header>
+  <%- include('../../layout/header.ejs') %>
   
   <main>
 
@@ -53,6 +41,8 @@
     </section>
 
   </main>
+
+  <%- include('../../layout/footer.ejs') %>
 
 </body>
 

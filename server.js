@@ -35,6 +35,11 @@ app.post('/searches', collectSearchResults);
 app.post('/add', addNewBook);
 app.post('/error', errorHandler);
 
+// app.use('*', (request, response) => {
+//   response.status(404).send('Page not found');
+// });
+
+
 
 function getAllBooks(request, response){
   let sql = 'SELECT * FROM books;';
@@ -105,7 +110,7 @@ function addNewBook(request, response){
   // let {author, title, isbn, image_url, description, bookshelf} = request.body;
 
   let sql = 'INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ($1, $2, $3, $4, $5, $6) RETURNING ID;';
-  let safeValues = [formData.author, formData.title, formData.isbn, formData.image_url, formData.description, '1'];
+  let safeValues = [formData.authors, formData.title, formData.isbn, formData.image_url, formData.description, '1'];
 
   console.log('2  safeValues:', safeValues);
 
@@ -132,23 +137,20 @@ function errorHandler(request, response){
 
 function Book(obj){
 
-  console.log('1 obj LOOK:', obj);
-  console.log('2 after LOOL:', obj.industryIdentifiers);
-  console.log('3 after LOOL:', obj.industryIdentifiers[0].identifier);
-
-
   let regex = /^http:\/\//i;
 
   this.thumbnail = obj.imageLinks.thumbnail ? obj.imageLinks.thumbnail.replace(regex, 'https://') : 'https://i.imgur.com/J5LVHEL.jpg';
   this.title = obj.title ? obj.title : 'Title not available';
   this.authors = obj.authors ? obj.authors : 'Author(s) not available';
   this.description = obj.description ? obj.description : 'Description not available';
-  this.isbn = obj.industryIdentifiers[0].identifier ? obj.industryIdentifiers[0].identifier : 'No ISBN available';
+  this.isbn = obj.industryIdentifiers ? obj.industryIdentifiers[0].identifier : 'No ISBN available';
 }
+
+
 
 client.connect()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`listening on ${PORT}`);
-  });
-})
+    });
+  })
