@@ -32,6 +32,7 @@ app.get('/', getAllBooks);
 app.get('/searches/new', renderNewForm);
 app.get('/books/detail/:books_id', getDetailsPage);
 app.post('/searches', collectSearchResults);
+app.post('/add', addNewBook);
 app.post('/error', errorHandler);
 
 
@@ -95,11 +96,46 @@ function collectSearchResults(request, response){
     })
 }
 
+
+function addNewBook(request, response){
+
+  let formData = request.body;
+  console.log('1  request.body:', formData);
+
+  // let {author, title, isbn, image_url, description, bookshelf} = request.body;
+
+  let sql = 'INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ($1, $2, $3, $4, $5, $6) RETURNING ID;';
+  let safeValues = [formData.author, formData.title, formData.isbn, formData.image_url, formData.description, '1'];
+
+  console.log('2  safeValues:', safeValues);
+
+  client.query(sql, safeValues)
+    .then(results => {
+
+      console.log('3  results in .then:', results);
+      let id = results.rows[0].id;
+
+      console.log( '4   id:', id);
+
+      response.status(200).redirect(`books/detail/${id}`);
+    }).catch((error) => {
+      console.log('ERROR', error);
+      response.render('pages/error');
+    })
+
+}
+
+
 function errorHandler(request, response){
   response.render('pages/error');
 }
 
 function Book(obj){
+
+  console.log('1 obj LOOK:', obj);
+  console.log('2 after LOOL:', obj.industryIdentifiers);
+  console.log('3 after LOOL:', obj.industryIdentifiers[0].identifier);
+
 
   let regex = /^http:\/\//i;
 
@@ -107,6 +143,7 @@ function Book(obj){
   this.title = obj.title ? obj.title : 'Title not available';
   this.authors = obj.authors ? obj.authors : 'Author(s) not available';
   this.description = obj.description ? obj.description : 'Description not available';
+  this.isbn = obj.industryIdentifiers[0].identifier ? obj.industryIdentifiers[0].identifier : 'No ISBN available';
 }
 
 client.connect()

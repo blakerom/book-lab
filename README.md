@@ -2,10 +2,10 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.12.01 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.12.03 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. 
+We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. They will have the ability to choose their favorite books and add them to a database. 
 
 ## Getting Started
 - User should install libraries
@@ -29,6 +29,7 @@ Libraries:
   - dotenv
   - superagent
   - ejs
+  - pg
 
 ## Change Log
 07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
@@ -41,6 +42,7 @@ Libraries:
 
 07-21-2020 5:17pm - Added Database of books for readers to add to.
 
+07-21-2020 11:00pm - Added the ability to add a book to the database and render details. 
 
 
 ## Credits and Collaborations
@@ -123,7 +125,7 @@ Actual time needed to complete: 1 min
 <hr>
 
 
-7. Lab 12 - Save Books
+1. Lab 12 - Save Books
 
 Estimate of time needed to complete: 90min
 
@@ -135,31 +137,31 @@ Actual time needed to complete: 3hr
 <hr>
 
 
-8. Lab 12 - View Details Page
+2. Lab 12 - View Details Page
 
 Estimate of time needed to complete: 90min
 
 Start time: 5:20pm
 
-Finish time: 
+Finish time: 7:20pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 2hr
 <hr>
 
 
-9. Lab 12 - Add Books to DB
+3. Lab 12 - Add Books to DB
 
 Estimate of time needed to complete: 60min
 
-Start time: 
+Start time: 8:45pm
 
-Finish time: 
+Finish time: 10:45pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 2hr 
 <hr>
 
 
-10. Lab 12 - App consistency
+4. Lab 12 - App consistency
 
 Estimate of time needed to complete: 90min
 
@@ -171,7 +173,7 @@ Actual time needed to complete:
 <hr>
 
 
-11. Lab 12 - Clean UI
+5. Lab 12 - Clean UI
 
 Estimate of time needed to complete: 30min
 
