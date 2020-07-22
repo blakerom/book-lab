@@ -25,7 +25,10 @@
   <h1>Hello Reader</h1>
 
   <main>
-
+    <% book.forEach(bookItem => { %>
+    <%- include('books/detail.ejs', {book: bookItem}) %>
+    <a href="/books/detail/<%= bookItem.id %>">Click Here for More Details</a>
+    <% }) %>
     <section>
       <ul>
         <li>
@@ -36,7 +39,7 @@
             <img src="<%= bookItem.image_url %>" alt="<%= bookItem.title %>" style="max-height: 400px; width: 300px;">
             <h2>Title:  <%= bookItem.title %></h2>
             <h4>Author:  <%= bookItem.author %></h4>
-            <a href="/books/detail<%= bookItem.id %>">Click Here for More Details</a>
+            <a href="/books/detail/<%= bookItem.id %>">Click Here for More Details</a>
           </li>
         <% }) %>
       </ul>

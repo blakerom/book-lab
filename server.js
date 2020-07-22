@@ -30,6 +30,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.get('/', getAllBooks);
 app.get('/searches/new', renderNewForm);
+app.get('/books/detail/:books_id', getDetailsPage);
 app.post('/searches', collectSearchResults);
 app.post('/error', errorHandler);
 
@@ -51,6 +52,21 @@ function getAllBooks(request, response){
 
 function renderNewForm(request, response){
   response.render('pages/searches/new');
+}
+
+function getDetailsPage(request, response){
+  let id = request.params.books_id;
+
+  let sql = 'SELECT * FROM books WHERE id=$1;';
+  let safeValues = [id];
+
+  client.query(sql, safeValues)
+    .then(results => {
+      console.log('this is the chosen book! ', results.rows);
+      let theChosenBook = results.rows[0];
+
+      response.status(200).render('pages/books/show', {book: theChosenBook});
+    })
 }
 
 function collectSearchResults(request, response){

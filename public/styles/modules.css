@@ -24,6 +24,12 @@ h2 {
   margin: 2em 0 1.5em;
   border: 6px solid white;
 } */
+main .book-item h5 {
+  display: none;
+}
+main .book-item p {
+  display: none;
+}
 .results h2 {
   margin-bottom: 1em;
 }
