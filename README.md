@@ -2,7 +2,7 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.11.02 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.12.01 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. 
@@ -39,7 +39,7 @@ Libraries:
 
 07-20-2020 9:56pm - Added styling to pages and fixed pathing issues.
 
-<!-- 07-20-2020 :pm -  -->
+07-21-2020 5:17pm - Added Database of books for readers to add to.
 
 
 
@@ -127,11 +127,11 @@ Actual time needed to complete: 1 min
 
 Estimate of time needed to complete: 90min
 
-Start time: 
+Start time: 2:15pm
 
-Finish time: 
+Finish time: 5:15pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 3hr
 <hr>
 
 
@@ -139,7 +139,7 @@ Actual time needed to complete:
 
 Estimate of time needed to complete: 90min
 
-Start time: 
+Start time: 5:20pm
 
 Finish time: 
 

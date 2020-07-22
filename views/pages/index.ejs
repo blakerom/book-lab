@@ -22,20 +22,20 @@
     </nav>
   </header>
 
-  <h1>Hello World</h1>
+  <h1>Hello Reader</h1>
 
   <main>
 
     <section>
       <ul>
         <li>
-          Total books in Library: <%= count %>
+          Total books in Library: <%= book.length %>
         </li>
         <% book.forEach(bookItem => { %>
           <li class="book-item" data-id="<%=bookItem.id %>">
-            <img src="<%= bookItem.image_url %>" alt="<%= bookItem.title %>">
-            <h2>title: <%= bookItem.title %></h2>
-            <h4>author: <%= bookItem.author %></h4>
+            <img src="<%= bookItem.image_url %>" alt="<%= bookItem.title %>" style="max-height: 400px; width: 300px;">
+            <h2>Title:  <%= bookItem.title %></h2>
+            <h4>Author:  <%= bookItem.author %></h4>
             <a href="/books/detail<%= bookItem.id %>">Click Here for More Details</a>
           </li>
         <% }) %>
