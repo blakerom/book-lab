@@ -18,18 +18,8 @@
   <button type="button" id="showForm">Show Form</button>
 
   <form id="update-details" action="/detail/<%= book.id %>?_method=PUT" method="post">
-    <fieldset>
-      <!-- took off type="hidden" -->
-      <input name="title" value="<%= book.title %>">
-      <input name="authors" value="<%= book.author %>">
-      <input name="description" value="<%= book.description %>">
-      <!-- <input name="image_url" value="<%= book.thumbnail %>"> -->
-      <input name="isbn" value="<%= book.isbn%>">
-      <input name="bookshelf" value="<%= book.bookshelf%>">
-      <button type="submit">Update Book Details</button>
-    </fieldset>
+  <%- include('../../layout/edit.ejs') %>
   </form>
-
 
 
   <%- include('../../layout/footer.ejs') %>

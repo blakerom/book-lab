@@ -124,6 +124,12 @@ form label {
   display: none;
 }
 
+#create-form input{
+  display: none;
+}
+
+
+
 footer {
   height: 250px;
   margin: 4em 0 0 0;
