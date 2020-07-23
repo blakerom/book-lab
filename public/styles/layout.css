@@ -12,3 +12,13 @@ nav {
   align-items: center;
   justify-content: center;
 }
+button {
+  font-weight: bolder;
+  margin-bottom: 5px;
+  padding: 3px;
+  border-radius: 3px;
+  transition: ease-in-out all 300ms;
+}
+button:hover {
+  border: 2px solid rgb(204, 221, 221);
+}

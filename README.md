@@ -2,7 +2,7 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.13.01 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.13.02 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. They will have the ability to choose their favorite books and add them to a database. 
@@ -46,6 +46,8 @@ Libraries:
 07-21-2020 11:00pm - Added the ability to add a book to the database and render details. 
 
 07-22-2020 3:10pm - Added functionality with partials for head, header, footer. 
+
+07-22-202- 11:33pm - Added feature to delete books from the bookshelf as well as fixed some styling issues.
 
 ## Credits and Collaborations
 - Using regex to prevent mixed content
@@ -181,9 +183,9 @@ Estimate of time needed to complete: 30min
 
 Start time: 3:10pm
 
-Finish time: 
+Finish time: 4:50pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 1hr 40min
 <hr>
 
 
@@ -194,9 +196,9 @@ Estimate of time needed to complete: 1hr
 
 Start time: 4:50pm
 
-Finish time: 
+Finish time: 6:45pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 1hr 55min
 <hr>
 
 
@@ -204,10 +206,10 @@ Actual time needed to complete:
 
 Estimate of time needed to complete: 1hr
 
-Start time: 
+Start time: 8:45pm
 
-Finish time: 
+Finish time: 11:33pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 2hr 50min
 <hr>
 

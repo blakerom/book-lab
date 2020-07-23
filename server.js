@@ -15,9 +15,6 @@ app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3001;
 
-// DATABASE_URL=postgres://jkfbgyafvvmedg:242edfde8c06b212a7f34f6206d46a1c1487131eca241c51c2a231507096ea07@ec2-54-234-44-238.compute-1.amazonaws.com:5432/d8092skbfpsrqb
-// DATABASE_URL=postgres://bromero:272727@localhost:5432/books_app
-
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', error => {
   console.log('ERROR', error);
@@ -37,6 +34,7 @@ app.get('/books/detail/:books_id', getDetailsPage);
 app.post('/searches', collectSearchResults);
 app.post('/add', addNewBook);
 app.put('/detail/:id', updateBookDetails);
+app.delete('/detail/:id', deleteBookFromBookshelf);
 
 app.post('/error', errorHandler);
 
@@ -52,10 +50,6 @@ function getAllBooks(request, response){
 
 }
 
-// function renderHomepage(request, response){
-//   response.render('pages/index');
-// }
-
 function renderNewForm(request, response){
   response.render('pages/searches/new');
 }
@@ -68,7 +62,6 @@ function getDetailsPage(request, response){
 
   client.query(sql, safeValues)
     .then(results => {
-      // console.log('this is the chosen book! ', results.rows);
       let theChosenBook = results.rows[0];
 
       response.status(200).render('pages/books/show', {book: theChosenBook});
@@ -76,8 +69,6 @@ function getDetailsPage(request, response){
 }
 
 function collectSearchResults(request, response){
-
-  console.log('data from form:', request.body);
   let search = request.body.search[0];
   let searchCategory = request.body.search[1];
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
@@ -105,22 +96,13 @@ function collectSearchResults(request, response){
 function addNewBook(request, response){
 
   let formData = request.body;
-  console.log('1  request.body:', formData);
 
-  // let {author, title, isbn, image_url, description, bookshelf} = request.body;
-
-  let sql = 'INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ($1, $2, $3, $4, $5, $6) RETURNING ID;';
-  let safeValues = [formData.authors, formData.title, formData.isbn, formData.image_url, formData.description, '1'];
-
-  console.log('2  safeValues:', safeValues);
+  let sql = 'INSERT INTO books (author, title, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5) RETURNING id;';
+  let safeValues = [formData.authors, formData.title, formData.isbn, formData.image_url, formData.description];
 
   client.query(sql, safeValues)
     .then(results => {
-
-      console.log('3  results in .then:', results);
       let id = results.rows[0].id;
-
-      console.log( '4   id:', id);
 
       response.status(200).redirect(`books/detail/${id}`);
     }).catch((error) => {
@@ -131,10 +113,6 @@ function addNewBook(request, response){
 
 
 function updateBookDetails(request, response){
-
-  // console.log('hello! inside updateBook..');
-  // console.log('params: ', request.params);
-
   let id = request.params.id;
 
   let {authors, title, isbn, description, bookshelf} = request.body;
@@ -151,7 +129,16 @@ function updateBookDetails(request, response){
 
 }
 
-
+function deleteBookFromBookshelf(request, response){
+  let id = request.params.id;
+  let sql = 'DELETE FROM books WHERE id=$1;';
+  let safeValue = [id];
+  
+  client.query(sql, safeValue)
+    .then(result => {
+      response.status(200).redirect('/');
+    })
+}
 
 
 function errorHandler(request, response){

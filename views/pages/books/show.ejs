@@ -15,15 +15,20 @@
   <h1>Book Details</h1>
   <%- include('detail.ejs') %>
 
-  <button type="button" id="showForm">Show Form</button>
+  <button type="button" id="showForm">Modify Book</button>
 
   <form id="update-details" action="/detail/<%= book.id %>?_method=PUT" method="post">
-  <%- include('../../layout/edit.ejs') %>
+    <%- include('../../layout/edit.ejs') %>
+    <button id="update-button" type="submit">Update Book Details</button>
   </form>
-
-
+  
+  <form id="delete-book" action="/detail/<%= book.id %>?_method=DELETE" method="post">
+    <input type="hidden" name="id" value="<%= book.id %>"><!--id from selected book-->
+    <button id="delete" type="submit">Delete Book From Bookshelf</button>
+  </form>
+  
+  
   <%- include('../../layout/footer.ejs') %>
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../../../js/app.js"></script>
