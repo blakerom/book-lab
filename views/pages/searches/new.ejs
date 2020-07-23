@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="../styles/base.css">
-    <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <link rel="stylesheet" type="text/css" href="../styles/modules.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    
+    <%- include('../../layout/head.ejs') %>
     <title>Book Search</title>
-</head>
+  </head>
 
 <body>
   
-  <header>
-    <nav>
-      <a href="../">Home</a>
-      <a href="/searches/new">New Search</a>
-      <a href="/searches/show">Show Results</a>
-    </nav>
-  </header>
+  <%- include('../../layout/header.ejs') %>
   
-  <main>
+  <main id="main">
 
 
     <section>
@@ -31,6 +19,30 @@
       <!-- the method of post also has to match the app.post route -->
       <form action="/searches" method="post">
 
+        <ul>
+
+          <li class="form-row">
+            <input type="text" name="search" placeholder="Enter a title or author" required>
+          </li>
+
+          <li class="form-row"></li>
+            <label for="title">Title</label>
+              <input type="radio" name="search" value="title" required>
+          </li>
+
+          <li class="form-row"></li>
+            <label for="title">Author</label>
+              <input type="radio" name="search" value="author" required>
+          </li>
+
+          <li class="form-row"></li>
+            <button type="submit">Search the Google Books API</button>
+          </li>
+
+        </ul>
+
+
+<!--         
         <input type="text" name="search" placeholder="Enter a title or author" required>
         
         <fieldset>
@@ -47,12 +59,14 @@
           </label>
         </fieldset>
 
-        <button type="submit">Search the Google Books API</button>
+        <button type="submit">Search the Google Books API</button> -->
 
       </form>
     </section>
 
   </main>
+
+  <%- include('../../layout/footer.ejs') %>
 
 </body>
 

@@ -1,4 +1,4 @@
-INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Michael Pollan', 'cooked', 'ISBN_1 2 34567890123', 'https://images-na.ssl-images-amazon.com/images/I/81oY9ggBl+L.jpg', 'This is the book COOKED!', 'I love this book!');
--- bookshelf ???
-INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Dean Koontz', 'Tick Tock', 'ISBN_1 3 12345678901', 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1414369761l/339511.jpg', 'This book is scary!', 'Freaky book');
-INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Sharon Heisel', 'Wrapped in a Riddle', 'ISBN_1 4 12345768902', 'https://images-na.ssl-images-amazon.com/images/I/51mSIARe8LL._SX314_BO1,204,203,200_.jpg', 'This book is cool and mysterious!', 'I hope she finds the cat!');
+-- INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Michael Pollan', 'cooked', 'ISBN_1 2 34567890123', 'https://images-na.ssl-images-amazon.com/images/I/81oY9ggBl+L.jpg', 'This is the book COOKED!', 'I love this book!');
+-- -- bookshelf ???
+-- INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Dean Koontz', 'Tick Tock', 'ISBN_1 3 12345678901', 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1414369761l/339511.jpg', 'This book is scary!', 'Freaky book');
+-- INSERT INTO books (author, title, isbn, image_url, description, bookshelf) VALUES ('Sharon Heisel', 'Wrapped in a Riddle', 'ISBN_1 4 12345768902', 'https://images-na.ssl-images-amazon.com/images/I/51mSIARe8LL._SX314_BO1,204,203,200_.jpg', 'This book is cool and mysterious!', 'I hope she finds the cat!');
