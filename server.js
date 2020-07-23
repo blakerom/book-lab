@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const pg = require('pg');
+const methodOverride = require('method-override');
 
 require('dotenv').config();
 require('ejs');
@@ -27,18 +28,17 @@ client.on('error', error => {
 app.use(express.static('./public'));
 //the below parses the form (body parser)
 app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
+
 
 app.get('/', getAllBooks);
 app.get('/searches/new', renderNewForm);
 app.get('/books/detail/:books_id', getDetailsPage);
 app.post('/searches', collectSearchResults);
 app.post('/add', addNewBook);
+app.put('/detail/:id', updateBookDetails);
+
 app.post('/error', errorHandler);
-
-// app.use('*', (request, response) => {
-//   response.status(404).send('Page not found');
-// });
-
 
 
 function getAllBooks(request, response){
@@ -68,7 +68,7 @@ function getDetailsPage(request, response){
 
   client.query(sql, safeValues)
     .then(results => {
-      console.log('this is the chosen book! ', results.rows);
+      // console.log('this is the chosen book! ', results.rows);
       let theChosenBook = results.rows[0];
 
       response.status(200).render('pages/books/show', {book: theChosenBook});
@@ -127,8 +127,31 @@ function addNewBook(request, response){
       console.log('ERROR', error);
       response.render('pages/error');
     })
+}
+
+
+function updateBookDetails(request, response){
+
+  // console.log('hello! inside updateBook..');
+  // console.log('params: ', request.params);
+
+  let id = request.params.id;
+
+  let {authors, title, isbn, description, bookshelf} = request.body;
+
+  let sql = 'UPDATE books SET author=$1, title=$2, isbn=$3, description=$4, bookshelf=$5 WHERE id=$6;';
+
+
+  let safeValues = [authors, title, isbn, description, bookshelf, id];
+
+  client.query(sql, safeValues)
+    .then(result => {
+      response.status(200).redirect('/');
+    })
 
 }
+
+
 
 
 function errorHandler(request, response){

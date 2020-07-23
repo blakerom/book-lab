@@ -15,7 +15,7 @@
     <p>Total books in Library: <%= book.length %></p>
     <% book.forEach(bookItem => { %>
     <%- include('books/detail.ejs', {book: bookItem}) %>
-    <a href="/books/detail/<%= bookItem.id %>">Click Here for More Details</a>
+    <a class ="detailslink" href="/books/detail/<%= bookItem.id %>">Click Here for More Details</a>
     <% }) %>
 
   </main>

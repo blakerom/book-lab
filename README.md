@@ -30,6 +30,7 @@ Libraries:
   - superagent
   - ejs
   - pg
+  - method-override
 
 ## Change Log
 07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
@@ -179,6 +180,31 @@ Actual time needed to complete:  55min
 Estimate of time needed to complete: 30min
 
 Start time: 3:10pm
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+
+1. Lab 13 - Update Details
+
+Estimate of time needed to complete: 1hr
+
+Start time: 4:50pm
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+2. Lab 13 - Remove Book from Bookshelf
+
+Estimate of time needed to complete: 1hr
+
+Start time: 
 
 Finish time: 
 
