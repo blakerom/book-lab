@@ -21,6 +21,7 @@
         <form id="create-form" action="/add" method="post">
           <button type="submit">Add To Favorites</button>
           <!-- cannot get partial to work in place of form below -->
+          <!-- pass in {book:book} -->
           <fieldset>
             <input  name="title" value="<%= book.title %>">
             <input  name="authors" value="<%= book.authors %>">
