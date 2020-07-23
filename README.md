@@ -2,7 +2,7 @@
 
 **Author**: Tia Low & Blake Romero
 
-**Version**: 1.12.03 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.13.01 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 We are building an application that allows a user to search book titles from the Google Books API and display the relevant information back to them in a simple and easy to read way. They will have the ability to choose their favorite books and add them to a database. 
@@ -30,6 +30,7 @@ Libraries:
   - superagent
   - ejs
   - pg
+  - method-override
 
 ## Change Log
 07-20-2020 2:45pm - Scaffolded file structure and a basic server.js and index.ejs. Added simple css to test funcitonality, successfully deployed to Heroku. 
@@ -44,6 +45,7 @@ Libraries:
 
 07-21-2020 11:00pm - Added the ability to add a book to the database and render details. 
 
+07-22-2020 3:10pm - Added functionality with partials for head, header, footer. 
 
 ## Credits and Collaborations
 - Using regex to prevent mixed content
@@ -165,7 +167,19 @@ Actual time needed to complete: 2hr
 
 Estimate of time needed to complete: 90min
 
-Start time: 
+Start time: 2:15pm (Weds)
+
+Finish time: 3:10
+
+Actual time needed to complete:  55min
+<hr>
+
+
+5. Lab 12 - Clean UI
+
+Estimate of time needed to complete: 30min
+
+Start time: 3:10pm
 
 Finish time: 
 
@@ -173,9 +187,22 @@ Actual time needed to complete:
 <hr>
 
 
-5. Lab 12 - Clean UI
 
-Estimate of time needed to complete: 30min
+1. Lab 13 - Update Details
+
+Estimate of time needed to complete: 1hr
+
+Start time: 4:50pm
+
+Finish time: 
+
+Actual time needed to complete: 
+<hr>
+
+
+2. Lab 13 - Remove Book from Bookshelf
+
+Estimate of time needed to complete: 1hr
 
 Start time: 
 
